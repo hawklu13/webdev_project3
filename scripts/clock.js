@@ -1,3 +1,6 @@
+// clock.js
+
+// --- Real-Time Clock ---
 function updateClock() {
   const now = new Date();
   const timeString = now.toLocaleTimeString([], {
@@ -5,43 +8,48 @@ function updateClock() {
     minute: '2-digit',
     second: '2-digit'
   });
-  document.getElementById('clock').textContent = timeString;
+  const clock = document.getElementById('clock');
+  if (clock) clock.textContent = timeString;
 }
-
-// Update every second
 setInterval(updateClock, 1000);
-updateClock(); 
+updateClock();
 
-// carousel of player images
+// --- Player Image Carousels ---
 const playerImages = {
-  drose: ["images/drose.jpg", "images/drose2.jpg", "images/drose3.jpg"],
-  matas: ["images/matas1.jpg", "images/matas2.jpg", "images/matas3.jpg"],
-  demar: ["images/demar1.jpg", "images/demar2.jpg", "images/demar3.jpg"]
+  drose: ["images/drose.jpg", "images/drose1.jpg", "images/drose2.jpg"],
+  demar: ["images/demar.jpg", "images/demar2.jpg", "images/demar3.jpg"],
+  matas: ["images/matas.jpg", "images/matas2.jpg", "images/matas3.jpg"]
 };
 
 const currentIndexes = {
   drose: 0,
-  matas: 0,
-  demar: 0
+  demar: 0,
+  matas: 0
 };
 
 function showImage(playerId) {
   const imgElement = document.getElementById(`${playerId}-image`);
+  if (!imgElement) return;
   imgElement.src = playerImages[playerId][currentIndexes[playerId]];
   imgElement.alt = `${playerId} image ${currentIndexes[playerId] + 1}`;
 }
 
 function nextImage(playerId) {
+  if (!playerImages[playerId]) return;
   currentIndexes[playerId] = (currentIndexes[playerId] + 1) % playerImages[playerId].length;
   showImage(playerId);
 }
 
 function prevImage(playerId) {
+  if (!playerImages[playerId]) return;
   currentIndexes[playerId] = (currentIndexes[playerId] - 1 + playerImages[playerId].length) % playerImages[playerId].length;
   showImage(playerId);
 }
 
-// Initialize all carousels when page loads
+// Initialize carousels once the page has fully loaded
 window.addEventListener('DOMContentLoaded', () => {
-  Object.keys(playerImages).forEach(playerId => showImage(playerId));
+  Object.keys(playerImages).forEach(playerId => {
+    showImage(playerId);
+  });
 });
+
