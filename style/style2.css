@@ -99,35 +99,34 @@ img {
   z-index: 999;
 }
 
-const playerImages = {
-  drose: ["images/drose.jpg", "images/drose2.jpg", "images/drose3.jpg"],
-  matas: ["images/matas1.jpg", "images/matas2.jpg", "images/matas3.jpg"],
-  demar: ["images/demar1.jpg", "images/demar2.jpg", "images/demar3.jpg"]
-};
-
-const currentIndexes = {
-  drose: 0,
-  matas: 0,
-  demar: 0
-};
-
-function showImage(playerId) {
-  const imgElement = document.getElementById(`${playerId}-image`);
-  imgElement.src = playerImages[playerId][currentIndexes[playerId]];
-  imgElement.alt = `${playerId} image ${currentIndexes[playerId] + 1}`;
+.carousel-container {
+  position: relative;
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
 }
 
-function nextImage(playerId) {
-  currentIndexes[playerId] = (currentIndexes[playerId] + 1) % playerImages[playerId].length;
-  showImage(playerId);
+.carousel-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
-function prevImage(playerId) {
-  currentIndexes[playerId] = (currentIndexes[playerId] - 1 + playerImages[playerId].length) % playerImages[playerId].length;
-  showImage(playerId);
+.carousel-buttons {
+  margin-top: 10px;
 }
 
-// Initialize all carousels when page loads
-window.addEventListener('DOMContentLoaded', () => {
-  Object.keys(playerImages).forEach(playerId => showImage(playerId));
-});
+.carousel-buttons button {
+  padding: 6px 12px;
+  margin: 0 5px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.carousel-buttons button:hover {
+  background-color: #555;
+}
