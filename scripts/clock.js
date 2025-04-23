@@ -19,7 +19,7 @@ const playerImages = {
   matas: ["images/matas.jpg", "images/matas2.jpg", "images/matas3.jpg"],
 
   // Bears players
-  calebwilliams: ["images/calebwillaims", "images/calebwilliams2.jpg", "images/calebwilliams3.jpg"],
+  calebwilliams: ["images/calebwilliams", "images/calebwilliams2.jpg", "images/calebwilliams3.jpg"],
   djmoore: ["images/djmoore.jpg", "images/djmoore2.jpg", "images/djmoore3.jpg"],
   justinfields: ["images/justinfields.jpg", "images/justinfields2.jpg", "images/justinfields3.jpg"]
 };
