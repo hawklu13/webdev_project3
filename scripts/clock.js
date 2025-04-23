@@ -16,7 +16,7 @@ updateClock();
 
 // --- Player Image Carousels ---
 const playerImages = {
-  drose: ["images/drose.jpg", "images/drose1.jpg", "images/drose2.jpg"],
+  drose: ["images/drose.jpg", "images/drose2.jpg", "images/drose3.jpg"],
   demar: ["images/demar.jpg", "images/demar2.jpg", "images/demar3.jpg"],
   matas: ["images/matas.jpg", "images/matas2.jpg", "images/matas3.jpg"]
 };
