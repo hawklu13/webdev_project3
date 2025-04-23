@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style/style3.css">
+  <link rel="stylesheet" href="style/style2.css">
   <title>Chicago Bears</title>
 </head>
-  <script src="scripts/clock.js"></script>
+
 <body>
   <nav>
     <ul>
@@ -21,20 +21,49 @@
   <section>
     <h2>My Favorite Players</h2>
     <ul>
-      <li><strong>Justin Fields</strong><br>
-        <img src="images/justinfields.jpg" alt="Picture of Justin Fields">
-        <p>Justin Fields is my favorite player who has played for the Chicago Bears. Before he got traded, he was one of the most electric and fun players to watch. 
-        He could always evade pressure and run for a touchdown if defenders didn't stop him.</p>
-      </li>
-      <li><strong>DJ Moore</strong><br>
-        <img src="images/djmoore.jpg" alt="Picture of DJ Moore">
-        <p>DJ Moore is one of my favorite players. He's more quiet and reserved compared to other players at his position, but I like his humility. 
-        Ever since he got traded here, he's been a hard worker and a great player for the Bears.</p>
-      </li>
       <li><strong>Caleb Williams</strong><br>
-        <img src="images/calebwilliams.jpg" alt="Picture of Caleb Williams">
         <p>Caleb Williams is my new favorite player. He just got drafted last year, but he's already shown that he can handle the big leagues and looks like a future star. 
         I hope next year he can show his true potential.</p>
+
+        <!-- Caleb Williams Carousel -->
+        <div class="carousel-container">
+          <h3>Caleb Williams</h3>
+          <img id="calebwilliams-image" class="carousel-image" src="" alt="Caleb Williams">
+          <div class="carousel-buttons">
+            <button onclick="prevImage('calebwilliams')">Previous</button>
+            <button onclick="nextImage('calebwilliams')">Next</button>
+          </div>
+        </div>
+      </li>
+
+      <li><strong>DJ Moore</strong><br>
+        <p>DJ Moore is one of my favorite players. He's more quiet and reserved compared to other players at his position, but I like his humility. 
+        Ever since he got traded here, he's been a hard worker and a great player for the Bears.</p>
+
+        <!-- DJ Moore Carousel -->
+        <div class="carousel-container">
+          <h3>DJ Moore</h3>
+          <img id="djmoore-image" class="carousel-image" src="" alt="DJ Moore">
+          <div class="carousel-buttons">
+            <button onclick="prevImage('djmoore')">Previous</button>
+            <button onclick="nextImage('djmoore')">Next</button>
+          </div>
+        </div>
+      </li>
+
+      <li><strong>Justin Fields</strong><br>
+        <p>Justin Fields is my favorite player who has played for the Chicago Bears. Before he got traded, he was one of the most electric and fun players to watch. 
+        He could always evade pressure and run for a touchdown if defenders didn't stop him.</p>
+
+        <!-- Justin Fields Carousel -->
+        <div class="carousel-container">
+          <h3>Justin Fields</h3>
+          <img id="justinfields-image" class="carousel-image" src="" alt="Justin Fields">
+          <div class="carousel-buttons">
+            <button onclick="prevImage('justinfields')">Previous</button>
+            <button onclick="nextImage('justinfields')">Next</button>
+          </div>
+        </div>
       </li>
     </ul>
   </section>
@@ -45,6 +74,8 @@
     <p>My favorite game that I have attended was Week 12, Bears vs. Vikings. This game was electric, where Caleb Williams threw for 300 yards and two touchdowns against a stacked Minnesota defense. 
     The food was pretty good too! My friend and I had a great time.</p>
   </section>
+
   <div id="clock"></div>
+  <script src="scripts/clock.js"></script>
 </body>
 </html>
