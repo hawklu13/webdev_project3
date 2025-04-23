@@ -75,3 +75,17 @@ strong {
 strong {
     color: #0056b3;
 }
+
+#clock {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  padding: 8px 14px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
