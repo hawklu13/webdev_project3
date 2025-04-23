@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3 Places That Mean a Lot to Me</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="clock" class="clock"></div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bears.html">Bears</a></li>
+      <li><a href="bulls.html">Bulls</a></li>
+      <li><a href="maps.html">Maps</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h2>3 Places That Mean a Lot to Me</h2>
+  </header>
+
+  <div id="map" style="height: 500px; width: 100%;"></div>
+
+  <script>
+    function initMap() {
+      const startL = { lat: 41.8781, lng: -87.6298 }; // Chicago center
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: startL,
+      });
+
+      // Marker 1 - El Oceano
+      new google.maps.Marker({
+        position: { lat: 41.793150, lng: -87.772390 },
+        map,
+        title: "El Oceano",
+      });
+
+      // Marker 2 - Montrose Beach
+      new google.maps.Marker({
+        position: { lat: 41.9633, lng: -87.6384 },
+        map,
+        title: "Montrose Beach",
+      });
+
+      // Marker 3 - The Tower (IIT)
+      new google.maps.Marker({
+        position: { lat: 41.831731277749945, lng: -87.62719285973479 },
+        map,
+        title: "The Tower",
+      });
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCp_F32R5fbtnXawgr6Tkhr-FolyckpMe8&callback=initMap">
+  </script>
+</body>
+</html>
