@@ -21,7 +21,7 @@ const playerImages = {
   // Bears players
   calebwilliams: ["images/calebwilliams.jpg", "images/calebwilliams2.jpg", "images/calebwilliams3.jpg"],
   djmoore: ["images/djmoore.jpg", "images/djmoore2.jpg", "images/djmoore3.jpg"],
-  justinfields: ["images/justinfields.jpg", "images/justinfields2.jpg", "images/justinfields3.jpg"]
+  justinfields: ["images/JustinFields.jpg", "images/justinfields2.jpg", "images/justinfields3.jpg"]
 };
 
 // Track the current image index for each player
